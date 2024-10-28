@@ -1,0 +1,53 @@
+.game-container {
+    position: relative;
+    width: 80%; 
+    height: 15%; 
+    margin: 20px auto;
+    border-radius: 30px 30px 30px 30px; 
+    border: 10px solid #84ed94; 
+    background-color: rgb(136, 178, 223);
+    overflow: hidden; 
+  }
+
+  .game-area{
+    position: relative;
+    width: 95%;
+    height: 30vh;
+    margin: 0 auto;
+    border-radius: 20px 20px 30px 30px; 
+    padding: 2%;  
+    background-color: rgb(64, 70, 190);
+    overflow: hidden;
+  }
+  .sunglass-icon {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+  }
+  
+  .sunglass-icon.active {
+    display: block;
+  }
+  
+  #game-score, #game-timer {
+    font-size: 1.2rem;
+    margin: 10px;
+  }
+  
+  #start-game {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #start-game:hover {
+    background-color: #0056b3;
+  }
+  
+  
+

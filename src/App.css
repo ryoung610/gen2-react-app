@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
-}
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap');
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 80px; /* Make the logo smaller */
+    width: 80px;
+    margin-bottom: 20px; /* Add space below the logo */
+}
+/* General body styling */
+body {
+    background-color: #2a2a2a;
+    font-family: 'Roboto', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.checkout-link {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2rem; /* Increase font size */
+    font-weight: bold; /* Make it bold */
+    color: #ffffff; /* Set text color */
+    background-color: #007bff; /* Button-like background */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    text-align: center;
+    margin-top: 10px;
   }
+  
+
+/* Neon Effect for Store */
+.store-link {
+    margin-right: 50px; /* Add space to the right of STORE */
+    color: #00e6ff;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-shadow: 0 0 5px #00e6ff, 0 0 10px #00e6ff, 0 0 20px #00e6ff;
+    transition: text-shadow 0.3s ease-in-out;
 }
 
+.store-link:hover {
+    text-shadow: 0 0 10px #00e6ff, 0 0 20px #00e6ff, 0 0 40px #00e6ff;
+}
+
+/* 3D Effect for Cart */
+.cart-link {
+    color: #ff007b;
+    text-transform: uppercase;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 2rem;
+    text-shadow: 0 0 5px #ff3b81, 0 0 10px #ff66a3, 5px 0px 0 #ff99c6;
+    transition: transform 0.3s ease-in-out;
+}
+
+.cart-link:hover {
+    transform: translateY(-3px);
+}
+
+.App-header p {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #fff; /* Adjust text color if needed */
+}
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* This centers content horizontally */
+    justify-content: center;
+    padding: 20px;
+    min-height: 100vh;
+    text-align: center; /* This ensures text content is centered */
 }
 
-.App-link {
-  color: #61dafb;
+.sunglasses-item p {
+    font-size: 1.25rem; /* Adjust font size to be more readable */
+    color: #ffcc00; /* Change color to a pronounced yellow */
+    font-weight: bold; /* Make the text bold for better visibility */
+    margin: 10px 0; /* Add spacing for clarity */
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.game-area {
+    position: relative;
+    width: 80%;
+    height: 150px;
+    background-color: #76bee4;
+    margin: 20px 0;
+    border: 2px solid #ccc;
+    overflow: hidden; /* Ensure no element goes out of bounds */
   }
-  to {
-    transform: rotate(360deg);
+  
+  .sunglass-icon {
+    font-size: 40px;
+    position: absolute; /* Absolute positioning for cross-browser compatibility */
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    z-index: 10; /* Ensure it's on top of other elements */
   }
-}
+  
+  #game-score, #game-timer {
+    font-size: 15px;
+    margin: 5px;
+  }
+  
+  #start-game {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }

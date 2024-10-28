@@ -1,26 +1,18 @@
-import React, { useContext } from 'react';
+import React from 'react';
+import logo from './logo.svg';
 import './App.css';
 import Sunglasses from './Components/Sunglasses';
-import Cart from './Components/Cart';
-import Game from './Components/Game';
-import { CartProvider, CartContext } from './Components/CartContext';
+import Cart from './Components/Cart'; // Import Cart component
+import { CartProvider } from './Components/CartContext'; // Import CartProvider
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import Checkout from './Components/Checkout';
-import BitcoinPayment from './Components/BitcoinPayment';
-
 
 function App() {
-  // Access cartTotal after CartProvider wraps the app
-  const { cartTotal } = useContext(CartContext);
-
   return (
     <CartProvider>
       <div className="App">
         <header className="App-header">
-          {/* Render the Game component here */}
-          <Game />
-
-          <p>Welcome to the Sunglass Hut Store!</p>
+          <img src={logo} className="App-logo" alt="logo" />
+          <p>Welcome to the Sunglasses Store!</p>
           <div className="App-content">
             <Router>
               <nav>
@@ -30,8 +22,6 @@ function App() {
               <Routes>
                 <Route path="/" element={<Sunglasses />} />
                 <Route path="/cart" element={<Cart />} />
-                <Route path="/checkout" element={<Checkout total={cartTotal} />} />
-                <Route path="/bitcoin-payment" element={<BitcoinPayment />} />
               </Routes>
             </Router>
           </div>
